@@ -1,8 +1,12 @@
 import React from "react"
+import Hamburger from "../components/Hamburger"
+
 
 
 function Login (){
-    return <div><h1>Hello World</h1></div>
+    return (
+    <div>HELLO WORLD</div>
+    )
 }
 
 export default Login;
