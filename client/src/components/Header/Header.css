@@ -38,5 +38,7 @@
   }
 .teamName{
     font-family: 'Cinzel', serif;
+    position: relative;
+    left: 4px;
   }
  
