@@ -1,0 +1,32 @@
+.footer {
+    background: #171a3b;
+    height: 25px;
+    font-size: 18px;
+    padding: 20px 0;
+    width: 100%;
+    -webkit-box-shadow: 0px -14px 28px 0px rgba(0,0,0,0.25);
+    box-shadow: 0px -14px 28px 0px rgba(0,0,0,0.25);
+    color: #fff;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    bottom: 0;
+  }  
+
+  @media (min-width: 576px) {
+    .footer {
+      display: flex;
+      position: fixed;
+      justify-content: space-around;
+      font-size: calc(10px + 14 * (100vw - 320px) / 800);
+    }
+  }
+  .copyright{
+    position: relative;
+    left: 37vw;
+    font-family: 'Cinzel', serif;
+    opacity: .5;
+    font-size: 10px;
+  }
+
+ 
