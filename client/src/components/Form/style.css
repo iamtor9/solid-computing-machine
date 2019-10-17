@@ -1,0 +1,58 @@
+
+.form {
+    margin: 20px;
+    text-align: center;
+}
+
+.form input {
+    top: 25vh;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: inline-block;
+    color: black;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: calc(150px + 25 * (100vw - 320px) / 800);
+    text-align: center;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    position: relative;
+    font-size: calc(20px + 14 * (100vw - 320px) / 800);
+}
+
+.btn {
+    background-color: #171a3b;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: calc(10px + 14 * (100vw - 320px) / 800);
+    text-align: center;
+    text-decoration: none;
+    font-size: calc(15px + 14 * (100vw - 320px) / 800);
+    margin: 4px 2px;
+    cursor: pointer;
+    position: relative;
+    top: 25vh;
+    left: 40vw;
+}
+
+.btn:hover {
+    background-color: #343863;
+    transition-duration: 0.4s;
+}
+
+.btn:active {
+    background-color: #171a3b;
+    transition-duration: 0.4s;
+}
+
+.signup {
+    top: 25vh;
+    position: relative;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 900;
+    font-size: calc(30px + 14 * (100vw - 320px) / 800);
+}
