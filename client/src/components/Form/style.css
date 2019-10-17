@@ -22,7 +22,7 @@
 }
 
 .btn {
-    background-color: #4caf50;
+    background-color: #171a3b;
     border: none;
     border-radius: 10px;
     color: white;
@@ -32,15 +32,18 @@
     font-size: calc(15px + 14 * (100vw - 320px) / 800);
     margin: 4px 2px;
     cursor: pointer;
+    position: relative;
+    top: 25vh;
+    left: 40vw;
 }
 
 .btn:hover {
-    background-color: #7bdd7e;
+    background-color: #343863;
     transition-duration: 0.4s;
 }
 
 .btn:active {
-    background-color: #488d4a;
+    background-color: #171a3b;
     transition-duration: 0.4s;
 }
 
@@ -49,7 +52,7 @@
     position: relative;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
-    color: #171a3b;
+    color: #ffffff;
     font-weight: 900;
     font-size: calc(30px + 14 * (100vw - 320px) / 800);
 }
