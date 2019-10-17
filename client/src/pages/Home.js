@@ -5,8 +5,8 @@ import Welcome from "../components/Welcome";
 
 
 
-function Home (){
-    return(
+function Home () {
+    return (
         <>
         <Header />
         <StartButton />
