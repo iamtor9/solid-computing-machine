@@ -5,8 +5,8 @@ import "./Header.css";
 function Header({}){
     return (
         <div className="navbar">
-            <div>Location Placeholder</div>
-            <div>SafeState</div>
+            <div></div>
+            <div><h1 className="teamName">SafeState</h1></div>
             <div >
             <span><Hamburger /></span>
             </div>

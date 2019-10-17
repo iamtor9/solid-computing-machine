@@ -1,0 +1,16 @@
+.start{
+    position: relative;
+    left: 31%;
+    top: 270px;
+    height: 150px;
+    width: 150px;
+    border-radius: 5px;
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    border:  #171a3b;
+    color: white;
+    background-color: #171a3b;
+    -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
