@@ -1,4 +1,5 @@
 import React from "react"
+import Notice from "../components/Notice";
 
 function renderSettings () {
 return (

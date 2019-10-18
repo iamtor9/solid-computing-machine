@@ -2,6 +2,7 @@
 .form {
     margin: 20px;
     text-align: center;
+    z-index: 99;
 }
 
 .form input {
@@ -19,6 +20,7 @@
     box-sizing: border-box;
     position: relative;
     font-size: calc(20px + 14 * (100vw - 320px) / 800);
+    z-index: 99;
 }
 
 .btn {
@@ -34,25 +36,49 @@
     cursor: pointer;
     position: relative;
     top: 25vh;
-    left: 40vw;
+    left: 34vw;
+    width: 125px;
+    z-index: 99;
 }
-
-.btn:hover {
-    background-color: #343863;
-    transition-duration: 0.4s;
-}
-
-.btn:active {
-    background-color: #171a3b;
-    transition-duration: 0.4s;
-}
-
 .signup {
-    top: 25vh;
+    top: 27vh;
     position: relative;
+    right: 1vw;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
     color: #ffffff;
     font-weight: 900;
-    font-size: calc(30px + 14 * (100vw - 320px) / 800);
+    font-size: calc(30px + 18 * (100vw - 320px) / 800);
+    z-index: 99;
+
+}
+.register{
+    position: relative;
+    top: 180px;
+    left: 5vw;
+    width: 90vw;
+    color: #ffffff;
+    z-index: 99;
+}
+.backgroundBox{
+    width: 90vw;
+    height: 35vh;
+    position: relative;
+    background: whitesmoke;
+    overflow: hidden;
+    opacity: .1;
+    left: 6vw;
+    bottom: 22vh;
+    border-radius: 5px;
+}
+.backgroundBox2{
+    width: 90vw;
+    height: 9vh;
+    position: relative;
+    background: whitesmoke;
+    overflow: hidden;
+    opacity: .1;
+    left: 6vw;
+    bottom: 18vh;
+    border-radius: 5px;
 }
