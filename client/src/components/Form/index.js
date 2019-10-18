@@ -43,15 +43,9 @@ class Form extends Component {
     // Notice how each input has a `value`, `name`, and `onChange` prop
     return (
       <div>
-        <h1 className="signup">Sign Up</h1>
+        <h1 className="signup">Login</h1>
         <form className="form">
-          <input
-            value={this.state.userName}
-            name="userName"
-            onChange={this.handleInputChange}
-            type="text"
-            placeholder="Username"
-          />
+
           <br />
           <input
             value={this.state.email}
@@ -68,11 +62,21 @@ class Form extends Component {
             type="password"
             placeholder="Password"
           />
-          <div></div>
         </form>
         <button className="btn" onClick={this.handleFormSubmit}>
         Submit
         </button>
+        <div>
+            <h1 className="register"> <hr></hr></h1>
+           
+            <button className="btn btnSignUp" onClick={this.handleFormSubmit}>
+        Sign Up!
+        </button>
+          </div>
+          <div className="backgroundBox">
+          </div>
+          <div className="backgroundBox2">
+          </div>
       </div>
     );
   }

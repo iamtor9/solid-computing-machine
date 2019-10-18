@@ -1,0 +1,37 @@
+.div1 {
+
+    position: relative;
+    top: 150px;
+    background-image: url("https://media.giphy.com/media/eE7sR2kbbmtJ6/giphy.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+
+
+}
+.div2 {
+    color: red;
+    position: relative;
+    top: 45vh;
+
+}
+
+/* h2 {
+    text-align: center;
+    size: large;
+    color: white;
+    font-size: xx-large;
+} */
+
+/* .wrongPage {
+    border-style: solid;
+    border-color: red;
+    border-width: 4px;
+    color: white;
+    align-content: center;
+}
+
+.red {
+    background: red;
+} */

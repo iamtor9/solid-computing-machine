@@ -1,12 +1,19 @@
-import React from "react"
-import Hamburger from "../components/Hamburger"
+import React from "react";
+import LoginHeader from "../components/LoginHeader";
+import Form from "../components/Form";
+import Footer from "../components/Footer";
 
 
 
-function Login (){
-    return (
-    <div>HELLO WORLD</div>
+
+function Signup (){
+    return(
+        <>
+        <LoginHeader />
+        <Form />
+        <Footer />
+        </>
     )
 }
 
-export default Login;
+export default Signup;
