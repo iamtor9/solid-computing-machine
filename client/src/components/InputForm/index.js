@@ -21,6 +21,10 @@ function InputForm(){
             <input className="password" type="text" name="Passwords Must Match" value=""  />
         </label>
         <label>
+            <h2>Pin:</h2>
+            <input className="pin" type="text" name="Enter Your Pin" value=""  />
+        </label>
+        <label>
             <h2>Contact First Name:</h2>
             <input className="contactFirst" type="text" name="First Name" value="" />
         </label>
@@ -32,7 +36,7 @@ function InputForm(){
             <h2>Contact Phone Number:</h2>
             <input className="contactPhone" type="number" name="Phone Number" value=""  />
         </label>
-        <button className="btn">
+        <button className="button">
         Submit
         </button>
     </form>

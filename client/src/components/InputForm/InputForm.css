@@ -1,24 +1,25 @@
 .mainForm{
-    position: fixed;
-    left: 18vw;
+    position: absolute;
+    left: 3vw;
     top: 15vh;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
     color: #ffffff;
-    z-index: 99;
+    z-index: 2;
 }
 .background{
     width: 90vw;
-    height: 60vh;
+    height: 125vh;
     position: relative;
-    background: whitesmoke;
+    background: rgb(131, 128, 128);
     overflow: hidden;
-    opacity: .1;
+    opacity: .5;
     left: 6vw;
     top: 17vh;
-    border-radius: 5px;
-    
+    border-radius: 5px;  
+    z-index: 1;
 }
+
 
 .firstName{
     width: 65vw;
@@ -44,16 +45,54 @@
       0 10px 10px rgba(0, 0, 0, 0.22);
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.25);
 }
+.contactFirst{
+    width: 65vw;
+    height: 4vh;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+      0 10px 10px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.25);
+}
+.contactLast{
+    width: 65vw;
+    height: 4vh;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+      0 10px 10px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.25);
+}
+.contactPhone{
+    width: 65vw;
+    height: 4vh;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+      0 10px 10px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.25);
+}
+.pin{
+    width: 65vw;
+    height: 4vh;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+      0 10px 10px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.25);
+}
 
-.btn {
+.button {
     background-color: #171a3b;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     color: white;
-    padding: calc(10px + 14 * (100vw - 320px) / 800);
     text-align: center;
-    text-decoration: none;
-    margin: 4px 2px;
-    width: 125px;
-    z-index: 99;
+    width: 200px;
+    height: 55px;
+    position: relative;
+    right: 0vw;
+    top: 3vh;
+    -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.25);
+}
+body{
+    height: 1150px;
 }
