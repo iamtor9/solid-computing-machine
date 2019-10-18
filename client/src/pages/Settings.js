@@ -1,17 +1,23 @@
 import React from "react"
+<<<<<<< HEAD
+import Settings from "../components/Settings"
+import Header from "../components/Header"
+=======
 import Notice from "../components/Notice";
+>>>>>>> 55f9b7eebd476b953e6314677d39f0ef2036f090
 
-function renderSettings () {
-return (
-    <container>
-        <ul>
-        <li>Setting1</li>
-        <li>Setting2</li>
-        <li>Setting3</li>
-        <li>Setting4</li>
-        </ul>
-    </container>
-)
+
+
+function settings () {
+    return (
+
+<>
+
+<Header />
+<Settings />
+
+</>
+)   
 }
 
-export default renderSettings;
+export default settings;
