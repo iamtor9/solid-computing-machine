@@ -25,6 +25,20 @@ input[type=text] {
 
   }
 
+  input[type=text]:hover {
+
+    width: 80%;
+    padding: 12px 20px;
+    margin: 15px 15px;
+    box-sizing: border-box;
+    border-style: solid;
+    border-width: 2px;
+    border-color: yellow;
+    box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+
+
+  }
+
   .updatePassword, .newContact {
       width: 90%;
       padding: 2px 2px;
