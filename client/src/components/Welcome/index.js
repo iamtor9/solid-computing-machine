@@ -1,10 +1,20 @@
-import React, {useState} from "react";
+import React, {Component} from "react";
 import "./Welcome.css";
 
 function Welcome (){
-    return(
-        <div><span className="welcome">PLACEHOLDER</span></div>
-    )
+    return (
+        <div>
+          <button>
+            Show menu
+          </button>
+          
+          <div className="menu">
+            <button> Menu item 1 </button>
+            <button> Menu item 2 </button>
+            <button> Menu item 3 </button>
+          </div>
+        </div>
+      );
 }
 
 export default Welcome;
