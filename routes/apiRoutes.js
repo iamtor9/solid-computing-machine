@@ -19,7 +19,7 @@ router.post("/api/signup", function(req, res) {
     db.Users.create({
       email: req.body.email,
       password: passHash.hashPass(req.body.password),
-      pin: req.body.pin,
+      pin: passHash.hashPass(req.body.pin),
       contacts: []
     })
       .then(user => {
