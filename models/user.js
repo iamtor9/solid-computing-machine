@@ -47,7 +47,7 @@ let UsersScheme = new Schema({
     // The ObjectIds will refer to the ids in the Note model
     ref: "Contacts"
   }]
-});
+}, {timestamps: true} );
 
 
 let Users = mongoose.model("Users", UsersScheme);
