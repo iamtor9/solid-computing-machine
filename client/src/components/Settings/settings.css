@@ -13,29 +13,17 @@
 
 input[type=text] {
 
-    width: 80vw;
+    width: 90%;
     padding: 12px 20px;
-    margin: 15px 15px ;
+    margin: 15px 0;
     box-sizing: border-box;
     border-style: solid;
     border-width: 2px;
     border-color: lightblue;
     box-shadow: 0 3px 6px #999, 0 3px 6px #999;
 
+
   }
-
-input[type=text]:hover {
-
-    width: 80vw;
-    padding: 12px 20px;
-    margin: 15px 15px ;
-    box-sizing: border-box;
-    border-style: solid;
-    border-width: 2px;
-    border-color: yellow;
-    box-shadow: 0 3px 6px #999, 0 3px 6px #999;  
-}
-
 
   .updatePassword, .newContact {
       width: 90%;
