@@ -45,7 +45,7 @@
     -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
     0 10px 10px rgba(0, 0, 0, 0.22);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-  opacity: .6;
+  opacity: .9;
   }
    
   /* Morph shape necessary with bubble or elastic */
@@ -67,4 +67,9 @@
   /* Styling of overlay */
   .bm-overlay {
     background: rgba(0, 0, 0, 0.3);
+  }
+
+  a {
+    text-decoration: none;
+    color: #171a3b;
   }
