@@ -11,6 +11,15 @@ function Settings() {
       </div>
 
       <form className="passWordUpdate">
+      <label for="newPassword"></label>
+        
+        <input
+          type="text"
+          id="opass"
+          name="oldPassword"
+          placeholder="Old Password"
+        ></input>
+
         <label for="newPassword"></label>
         <input
           type="text"
