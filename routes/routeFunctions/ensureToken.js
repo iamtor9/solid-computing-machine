@@ -22,7 +22,7 @@ module.exports = function(req, res, next) {
             JSON.stringify(userData.contacts) === JSON.stringify(user.contacts)
           ) {
             //if completely valid token then sent to the route
-            req.tokenData = data;
+            req.tokenData = data.user;
             next();
           } else {
             res.sendStatus(403);

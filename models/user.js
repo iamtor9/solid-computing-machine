@@ -1,4 +1,5 @@
 let mongoose = require("mongoose");
+let bcrypt = require("bcrypt");
 
 // Save a reference to the Schema constructor
 let Schema = mongoose.Schema;
@@ -25,13 +26,7 @@ let UsersScheme = new Schema({
   password: {
     type: String,
     trim: true,
-    required: "Password is Required",
-    validate: [
-      function(input) {
-        return input.length >= 8;
-      },
-      "Password should be longer."
-    ]
+    required: "Password is Required"
   },
   pin: {
     type: String,
@@ -53,6 +48,7 @@ let UsersScheme = new Schema({
     ref: "Contacts"
   }]
 });
+
 
 let Users = mongoose.model("Users", UsersScheme);
 
