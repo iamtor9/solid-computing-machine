@@ -63,3 +63,20 @@
       ```
     - `response` - JSON web token <br>
     <hr>
+- `/api/password` - the methods below explain the structure that is to be sent and that will be sent back out
+    - `post`
+        - `input`<br>
+      HEADERS
+      ```
+      authorization = bearer JSON_WEB_TOKEN
+      ```
+      BODY
+      ```JSON
+      {
+          "password": "12345678",
+          "newPass": "87654321",
+          "confirmNewPass": "87654321"
+      }
+      ```
+    - `response` - JSON web token <br>
+    <hr>

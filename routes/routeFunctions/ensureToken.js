@@ -17,6 +17,7 @@ module.exports = function(req, res, next) {
         let userData = data.user;
         db.Users.findOne({ _id: data.user._id }).then(user => {
           if (
+            userData._id === user._id &&
             userData.email === user.email &&
             userData.pin === user.pin &&
             JSON.stringify(userData.contacts) === JSON.stringify(user.contacts)
