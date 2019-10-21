@@ -1,18 +1,21 @@
 .div1 {
 
     position: relative;
-    top: 150px;
+    top: 70px;
     background-image: url("https://media.giphy.com/media/eE7sR2kbbmtJ6/giphy.gif");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
+    align-content: center;
 
 
 }
 .div2 {
+    text-align: center;
     color: red;
     position: relative;
+    box-shadow: 0 3px 6px #999, 0 3px 6px #999;
     top: 45vh;
 
 }
