@@ -46,7 +46,17 @@ let UsersScheme = new Schema({
     type: Schema.Types.ObjectId,
     // The ObjectIds will refer to the ids in the Note model
     ref: "Contacts"
-  }]
+  }],
+  firstName: {
+    type: String,
+    trim: true,
+    required: "first name is Required"
+  },
+  lastName: {
+    type: String,
+    trim: true,
+    required: "last name is Required"
+  }
 }, {timestamps: true} );
 
 
