@@ -1,52 +1,34 @@
-import React from "react"
-import "../Settings/settings.css"
+import React from "react";
+import "../Settings/settings.css";
 
-function Settings () {
-return (
+function Settings() {
+  return (
+    <div className="settings1">
+      <div className="updatePassword">
+        <h1>
+          <label for="updatePassword">Change Password</label>
+        </h1>
+      </div>
 
-<div className="settings1">
+      <form className="passWordUpdate">
+        <label for="newPassword"></label>
+        <input
+          type="text"
+          id="npass"
+          name="newPassword"
+          placeholder="New Password.."
+        ></input>
 
-<div className="updatePassword">
-    <h1>
-        <label for="updatePassword">Change Password</label> 
-    </h1>
-</div>
-  
-<form className="passWordUpdate">
+        <label for="confirmPassword"></label>
+        <input
+          type="text"
+          id="cpass"
+          name="confirmPassword"
+          placeholder="Confirm New Password.."
+        ></input>
 
-    <label for="newPassword"></label>
-    <input type="text" id="npass" name="newPassword" placeholder="New Password"></input>
-
-    <label for="confirmPassword"></label>
-    <input type="text" id="cpass" name="confirmPassword" placeholder="Confirm New Password"></input>
-
-    <input type="submit" className="btn1" value="Submit"></input>
-
-</form>
-  
-<div className="newContact">
-    <h1>
-        <label for="newContact">Add Emergency Contact</label> 
-    </h1>
-</div>
-
-<form className="addNewContact">
-
-    <label for="fname"></label>
-    <input type="text" id="fname" name="firstname" placeholder="Firstname"></input>
-    
-    <label for="lname"></label>
-    <input type="text" id="lname" name="lastname" placeholder="Lastname"></input>
-    
-    <label for="phone"></label>
-    <input type="text" id="phone" name="" placeholder="Mobile"></input>
-    
-    <input type="submit" className="btn1" value="Submit"></input>
-
-  </form>
-</div>
-)
-}
+        <input type="submit" className="btn1" value="Submit"></input>
+      </form>
 
       <div className="newContact">
         <h1>
