@@ -15,11 +15,13 @@ input[type=text] {
 
     width: 90%;
     padding: 12px 20px;
-    margin: 8px 0;
+    margin: 15px 0;
     box-sizing: border-box;
     border-style: solid;
     border-width: 2px;
     border-color: lightblue;
+    box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+
 
   }
 
