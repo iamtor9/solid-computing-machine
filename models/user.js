@@ -1,0 +1,60 @@
+let mongoose = require("mongoose");
+
+// Save a reference to the Schema constructor
+let Schema = mongoose.Schema;
+
+let UsersScheme = new Schema({
+  email: {
+    type: String,
+    trim: true,
+    lowercase: true,
+    unique: true,
+    required: "Email address is required",
+    validate: [
+      function(email) {
+        let re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        return re.test(email);
+      },
+      "Please fill a valid email address"
+    ],
+    match: [
+      /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
+      "Please fill a valid email address"
+    ]
+  },
+  password: {
+    type: String,
+    trim: true,
+    required: "Password is Required",
+    validate: [
+      function(input) {
+        return input.length >= 8;
+      },
+      "Password should be longer."
+    ]
+  },
+  pin: {
+    type: String,
+    trim: true,
+    required: "Pin is Required",
+    validate: [
+      function(input) {
+        let isCorrect = input.length >= 4;
+        if (isCorrect) isCorrect = input.length <= 4;
+        return isCorrect;
+      },
+      "Pin should be 4 characters"
+    ]
+  },
+  contacts: [{
+    // Store ObjectIds in the array
+    type: Schema.Types.ObjectId,
+    // The ObjectIds will refer to the ids in the Note model
+    ref: "Contacts"
+  }]
+});
+
+let Users = mongoose.model("Users", UsersScheme);
+
+// Export the Users model
+module.exports = Users;
