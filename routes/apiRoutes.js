@@ -38,7 +38,7 @@ router.post("/api/signup", function(req, res) {
               res.status(200).json({ token });
             })
             .catch(err => {
-              db.Users.delete({ _id: user._id });
+              // db.Users.delete({ _id: user._id });
               res.status(400).json(err.message);
             });
         })

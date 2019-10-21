@@ -36,7 +36,7 @@ function Settings() {
           placeholder="Confirm New Password"
         ></input>
 
-        <input type="submit" className="btn1" value="Submit"></input>
+        <button onclick="submitForm(this)" type="submit" className="btn1"  value="Submit"></button>
       </form>
 
       <div className="newContact">
@@ -65,7 +65,7 @@ function Settings() {
         <label for="phone"></label>
         <input type="text" id="phone" name="" placeholder="Mobile Number"></input>
 
-        <input type="submit" className="btn1" value="Submit"></input>
+        <button type="submit" className="btn2" value="Submit"></button>
       </form>
     </div>
   );
