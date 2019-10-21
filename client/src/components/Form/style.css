@@ -19,31 +19,55 @@
     border: 1px solid #ccc;
     box-sizing: border-box;
     position: relative;
+    left: 6vw;
     font-size: calc(20px + 14 * (100vw - 320px) / 800);
     z-index: 99;
 }
 
 .btn {
-    background-color: #171a3b;
-    border: none;
-    border-radius: 10px;
+    background-color: #4CAF50; 
+    border-style: solid;
     color: white;
-    padding: calc(10px + 14 * (100vw - 320px) / 800);
+    padding: 15px 32px;
     text-align: center;
     text-decoration: none;
-    font-size: calc(15px + 14 * (100vw - 320px) / 800);
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    position: relative;
+    top: 25vh;
+    left: 36vw;
+    width: 125px;
+    z-index: 99;
+    -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.25);
+}
+.btnSignUp{
+    background-color: #4CAF50; 
+    border-style: solid;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
     position: relative;
     top: 25vh;
     left: 34vw;
-    width: 125px;
+    width: 145px;
     z-index: 99;
+    -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.25);
 }
 .signup {
     top: 27vh;
     position: relative;
-    right: 1vw;
+    left: 5vw;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
     color: #ffffff;
@@ -64,21 +88,21 @@
     width: 90vw;
     height: 35vh;
     position: relative;
-    background: rgb(131, 128, 128);
+    background:whitesmoke;
     overflow: hidden;
     opacity: .3;
     left: 6vw;
-    bottom: 22vh;
+    bottom: 23vh;
     border-radius: 5px;
 }
 .backgroundBox2{
     width: 90vw;
-    height: 9vh;
+    height: 13vh;
     position: relative;
     background: whitesmoke;
     overflow: hidden;
-    opacity: .1;
+    opacity: .3;
     left: 6vw;
-    bottom: 18vh;
+    bottom: 20vh;
     border-radius: 5px;
 }

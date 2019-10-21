@@ -3,7 +3,7 @@ import "./InputForm.css";
 
 function InputForm(){
     return (
-        <form className="mainForm">
+    <form className="mainForm">
         <label>
         <h2>First Name:</h2>
             <input className="firstName" type="text" name="First Name" value="" />

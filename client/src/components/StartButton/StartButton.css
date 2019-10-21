@@ -1,19 +1,20 @@
 .start{
     position: relative;
-    left: 33vw;
+    left: 22vw;
     top: 270px;
-    height: 150px;
-    width: 150px;
-    border-radius: 5px;
-    font-family: 'Cinzel', serif;
-    font-weight: bold;
-    border:  #171a3b;
+    height: 250px;
+    width: 250px;
+    background-color: #4CAF50; /* Green */
+    border-style: solid;
     color: white;
-    background-color: #171a3b;
-    -webkit-box-shadow: 0 14px 28px rgba(228, 214, 214, 0.25),
-    0 10px 10px rgba(228, 214, 214, 0.25);
-    box-shadow: 0 14px 28px rgba(228, 214, 214, 0.25), 0 10px 10px rgba(228, 214, 214, 0.25);
-    opacity: .9;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 40px;
+    -webkit-box-shadow: 0 14px 28px rgba(19, 18, 18, 0.25),
+    0 10px 10px rgbargba(19, 18, 18, 0.25);
+    box-shadow: 0 14px 28px rgba(19, 18, 18, 0.25), 0 10px 10px rgba(19, 18, 18, 0.25);
 
 }
 
