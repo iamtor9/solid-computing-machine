@@ -1,17 +1,19 @@
 import React from "react"
 import NotFound from "../components/NotFound"
-
+import Header from "../components/Header"
 
 function notFound () {
     return (
+        
 
-    <div>"error: 404 page not found!"
-        <button>
-        <a href="/home">Home</a>
-        </button>
-        </div>
+<>
 
-    )   
+<Header />
+
+<NotFound />
+
+</>
+)   
 }
 
 export default notFound;

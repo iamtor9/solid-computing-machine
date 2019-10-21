@@ -1,16 +1,17 @@
 import React from "react"
+import Settings from "../components/Settings"
+import Header from "../components/Header"
 
-function renderSettings () {
-return (
-    <container>
-        <ul>
-        <li>Setting1</li>
-        <li>Setting2</li>
-        <li>Setting3</li>
-        <li>Setting4</li>
-        </ul>
-    </container>
-)
+function settings () {
+    return (
+
+<>
+
+<Header />
+<Settings />
+
+</>
+)   
 }
 
-export default renderSettings;
+export default settings;

@@ -1,14 +1,17 @@
 import React from "react";
-import Header from "../components/Header";
+import LoginHeader from "../components/LoginHeader";
 import Form from "../components/Form";
+import Footer from "../components/Footer";
+
 
 
 
 function Signup (){
     return(
         <>
-        <Header />
+        <LoginHeader />
         <Form />
+        <Footer />
         </>
     )
 }
