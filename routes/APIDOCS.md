@@ -1,6 +1,6 @@
-# how to use each endpoint and what it returns
+# How to use each endpoint and what it returns
 
-- `/api/signup` - the methods below explain the structure that is to be sent and that will be sent back out
+- `/api/signup` - the methods below explain the structure that is to be sent, and that will be sent back out
     - `post`
         - `input` - this will try to create a user based on the given body data <br>
         BODY
@@ -31,7 +31,7 @@
         - `response` - JSON web token <br>
     <hr>
 - `/api/contacts` - the methods below explain the structure that is to be sent and that will be sent back out
-  - `post` - this will add contacts to the user provided in the token
+  - `post` - this will add contacts to the user-provided in the token
     - `input` <br>
       HEADERS
       ```
