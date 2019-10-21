@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import Main from "./pages/Main";
 import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
-import SignUp from "./pages/SignUp";
+import SignUp from "./pages/SignUp/SignUp";
 
 
 function App() {
