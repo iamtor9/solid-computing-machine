@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 
 
 
-function Signup (){
+function Login (){
     return(
         <>
         <LoginHeader />
@@ -16,4 +16,4 @@ function Signup (){
     )
 }
 
-export default Signup;
+export default Login;

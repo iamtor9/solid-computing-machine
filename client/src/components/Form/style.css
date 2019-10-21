@@ -64,9 +64,9 @@
     width: 90vw;
     height: 35vh;
     position: relative;
-    background: whitesmoke;
+    background: rgb(131, 128, 128);
     overflow: hidden;
-    opacity: .1;
+    opacity: .3;
     left: 6vw;
     bottom: 22vh;
     border-radius: 5px;
