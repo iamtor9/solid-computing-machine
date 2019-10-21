@@ -16,7 +16,7 @@ function Settings() {
           type="text"
           id="npass"
           name="newPassword"
-          placeholder="New Password.."
+          placeholder="New Password"
         ></input>
 
         <label for="confirmPassword"></label>
@@ -24,7 +24,7 @@ function Settings() {
           type="text"
           id="cpass"
           name="confirmPassword"
-          placeholder="Confirm New Password.."
+          placeholder="Confirm New Password"
         ></input>
 
         <input type="submit" className="btn1" value="Submit"></input>
@@ -42,7 +42,7 @@ function Settings() {
           type="text"
           id="fname"
           name="firstname"
-          placeholder="first name.."
+          placeholder="First Name"
         ></input>
 
         <label for="lname"></label>
@@ -50,11 +50,11 @@ function Settings() {
           type="text"
           id="lname"
           name="lastname"
-          placeholder="last name.."
+          placeholder="Last Name"
         ></input>
 
         <label for="phone"></label>
-        <input type="text" id="phone" name="" placeholder="number.."></input>
+        <input type="text" id="phone" name="" placeholder="Mobile Number"></input>
 
         <input type="submit" className="btn1" value="Submit"></input>
       </form>
