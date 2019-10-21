@@ -13,7 +13,7 @@ require("dotenv").config();
 //signup / create user account route
 router.post("/api/signup", function(req, res) {
   //create user
-  if (req.body.password.length < 8)
+  if (!req.body.password || req.body.password.length < 8)
     return res.status(400).json({
       message: "Users validation failed: password: Password should be longer."
     });
@@ -122,14 +122,16 @@ router.post("/api/password", ensureToken, function(req, res) {
   db.Users.findOne({ _id: req.tokenData._id }).then(user => {
     if (!passHash.isValid(req.body.password, user.password))
       return res.status(400).json({ message: "incorrect password provided" });
+    let newPassword = passHash.hashPass(req.body.newPass);
     db.Users.findOneAndUpdate(
       { _id: req.tokenData._id },
-      { password: passHash.hashPass(req.body.newPass) },
-      { upsert: true }
-    ).then(async newUser => {
+      { password: newPassword }
+    )
+    .then(()=>{return db.Users.findOne({ _id: req.tokenData._id })})
+    .then(async newUser => {
       //create and sign a token for the user
       const token = await createToken(newUser);
-      res.status(200).json({ token });
+      res.status(200).json({ token, newPAss: newUser.password, oldPAss: user.password });
     });
   });
 });
