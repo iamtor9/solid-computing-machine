@@ -36,7 +36,7 @@ function InputForm(){
         </label>
         <label>
             <h2>Pin:</h2>
-            <input className="pin" type="number" name="Enter Your Pin" value={pin} onChange={(event) => setPin(event.target.value)}  />
+            <input className="pin" type="text" name="Enter Your Pin" value={pin} onChange={(event) => setPin(event.target.value)}  />
         </label>
         <label>
             <h2>Contact First Name:</h2>
@@ -49,7 +49,7 @@ function InputForm(){
         <label>
             <h2>Contact Phone Number:</h2>
 
-            <input className="contactPhone" type="number" name="Phone Number" value={phone} onChange={(event) => setPhone(event.target.value)} />
+            <input className="contactPhone" type="text" name="Phone Number" value={phone} onChange={(event) => setPhone(event.target.value)} />
         </label>
         <button className="button" onClick={event => {
             event.preventDefault();
