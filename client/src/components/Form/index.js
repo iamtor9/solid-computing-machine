@@ -69,7 +69,7 @@ class Form extends Component {
         <div>
             <h1 className="register"> <hr></hr></h1>
            
-            <button className="btn btnSignUp" onClick={this.handleFormSubmit}>
+            <button className="btn btnSignUp" onClick={()=>this.props.history.push("/signup")}>
         Sign Up!
         </button>
           </div>

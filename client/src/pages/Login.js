@@ -6,11 +6,11 @@ import Footer from "../components/Footer";
 
 
 
-function Login (){
+function Login ({history}){
     return(
         <>
         <LoginHeader />
-        <Form />
+        <Form history={history}/>
         <Footer />
         </>
     )
