@@ -1,0 +1,12 @@
+.usePhone{
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-image: url("https://media.giphy.com/media/12YpJx9jXOiKk/giphy.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
