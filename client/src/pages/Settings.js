@@ -1,12 +1,41 @@
 import React from "react"
+import axios from "axios"
 import Settings from "../components/Settings"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 
 
-function settings () {
-    return (
 
+export default class PasswordUpdate extends React.Component {
+    state = {
+      opass: '',
+      npass: '',
+      cpass: ''
+    }
+  
+    handleChange = event => {
+      this.setState({ name: event.target.value });
+    }
+  
+    handleSubmit = event => {
+      event.preventDefault();
+  
+      const user = {
+        opass: this.state.opass,
+        npass: this.state.npass,
+        cpass: this.state.cpass
+      };
+  
+      axios.post(``, { user })
+        .then(res => {
+          console.log(res);
+          console.log(res.data);
+        })
+    }
+  
+    render() {
+      return (
+        
 <>
 
 <Header />
@@ -14,30 +43,6 @@ function settings () {
 <Footer />
 
 </>
-)   
-}
-
-// Submit new password form function.
-// $(document).on('click','.btn1',function(e){
-//     // this will prevent form and reload page on submit.
-//     e.preventDefault();
-
-//     const newPass = document.getElementById("npass").data;
-//     const confirmPass = document.getElementById("cpass").data;
-  
-//     // Ajax call here.
-//    $.ajax({
-//                   type:'POST',
-//                   url:'/',
-//                   newPass: { newPass.data },
-//                   confirmPass: { confirmPass.data },
-//                   success:function(data)
-//                   {
-//                     alert('you have updated succesfully updated your password!');
-//                   }
-//                 })
-//             })
-    
-   
-
-export default settings;
+      )
+    }
+  }
