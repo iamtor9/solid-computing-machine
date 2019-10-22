@@ -34,7 +34,7 @@ function InputForm(){
         </label>
         <label>
             <h2>Contact Phone Number:</h2>
-            <input className="contactPhone" type="number" name="Phone Number" value=""  />
+            <input className="contactPhone" type="text" name="Last Name" value=""  />
         </label>
         <button className="button">
         Submit
