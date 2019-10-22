@@ -1,0 +1,17 @@
+.btn {position: relative;
+    left: 22vw;
+    top: 270px;
+    height: 50px;
+    width: 50px;
+    background-color: #4CAF50; /* Green */
+    border-style: solid;
+    border-radius: 5px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 14px 28px rgba(7, 7, 7, 0.25), 0 10px 10px rgba(19, 18, 18, 0.25);
+}
