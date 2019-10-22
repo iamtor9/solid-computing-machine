@@ -39,8 +39,8 @@
     cursor: pointer;
     position: relative;
     top: 25vh;
-    left: 36vw;
-    width: 125px;
+    left: 30%;
+    width: 200px;
     z-index: 99;
     -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
     0 10px 10px rgba(0, 0, 0, 0.22);
@@ -59,8 +59,8 @@
     cursor: pointer;
     position: relative;
     top: 25vh;
-    left: 34vw;
-    width: 145px;
+    left: 30%;
+    width: 200px;
     z-index: 99;
     -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
     0 10px 10px rgba(0, 0, 0, 0.22);
