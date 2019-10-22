@@ -1,6 +1,7 @@
 import React from "react";
 import auth from "./auth";
 import { PromiseProvider } from "mongoose";
+import Home from "../src/pages/Home";
 
 export const LandingPage = () => {
     return (
@@ -16,5 +17,7 @@ export const LandingPage = () => {
                 Login
             </button>
         </div>
-    );
-};
+    )
+
+}
+export default Home 
