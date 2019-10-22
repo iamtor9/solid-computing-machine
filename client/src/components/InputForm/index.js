@@ -42,6 +42,7 @@ function InputForm(){
         </label>
         <label>
             <h2>Contact Phone Number:</h2>
+
             <input className="contactPhone" type="number" name="Phone Number" value={phone} onChange={(event) => setPhone(event.target.value)} />
         </label>
         <button className="button" onClick={event => {
