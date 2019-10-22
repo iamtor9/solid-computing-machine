@@ -4,7 +4,6 @@ import "./style.css";
 class Form extends Component {
   // Setting the component's initial state
   state = {
-    userName: "",
     email: "",
     password: ""
   };
@@ -26,14 +25,13 @@ class Form extends Component {
   handleFormSubmit = event => {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     event.preventDefault();
-    if (!this.state.userName || !this.state.email) {
-      alert("Fill out your username please!");
+    if (!this.state.email) {
+      alert("Please use valid email");
     } else if (this.state.password.length < 6) {
       alert(`Choose a more secure password`);
     }
 
     this.setState({
-      userName: "",
       email: "",
       password: ""
     });
