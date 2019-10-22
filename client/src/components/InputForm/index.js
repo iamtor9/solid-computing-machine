@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./InputForm.css";
+var is_valid_email = function(email) { return /^.+@.+\..+$/.test(email); }
 
 function InputForm(){
     const [firstName, setFirstName] = useState("")
@@ -27,11 +28,11 @@ function InputForm(){
         </label>
         <label>
         <h2>Password:</h2>
-            <input className="password" type="text" name="Password" value={password} onChange={(event) => setPassword(event.target.value)} />
+            <input className="password" type="password" name="Password" value={password} onChange={(event) => setPassword(event.target.value)} />
         </label>
         <label>
             <h2>Enter Password Again:</h2>
-            <input className="password" type="text" name="Passwords Must Match" value={passwordConfirm} onChange={(event) => setConfirm(event.target.value)}  />
+            <input className="password" type="password" name="Passwords Must Match" value={passwordConfirm} onChange={(event) => setConfirm(event.target.value)}  />
         </label>
         <label>
             <h2>Pin:</h2>
@@ -53,17 +54,21 @@ function InputForm(){
         <button className="button" onClick={event => {
             event.preventDefault();
             if (!firstName || !lastName || !email || !password || !passwordConfirm || !pin || !contactFirst || !contactLast || !phone) {
-            } else if (password.length < 6) {
+            } else if (password.length < 6 && password === passwordConfirm) {
                 alert(
-                    `Choose a more secure password ${firstName} ${lastName}`
+                    `Choose a more secure password`
                 );
-                 } else if (pin.length < 4) {
-                    alert(
-                        `Choose a more secure pin ${firstName} ${lastName}`
+                    } else if (pin.length < 4) {
+                        alert(
+                            `Choose a more secure pin`
                     )
                     } else if (pin.length > 4) {
                         alert(
-                            `Choose a shorter pin ${firstName} ${lastName}`
+                            `Choose a shorter pin`
+                        )
+                    } else if (!is_valid_email(email)) {
+                        alert(
+                            `Choose a valid email`
                         )
                 
             } else {
@@ -78,7 +83,7 @@ function InputForm(){
             setContactFirst("");
             setContactLast("");
             setPhone("");
-
+            setEmail("");
         }}>
         Submit
         </button>
