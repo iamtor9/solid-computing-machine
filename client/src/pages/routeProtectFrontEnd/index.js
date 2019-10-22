@@ -24,7 +24,7 @@ function App() {
             <Switch>
             {/* home or main landing page goes below  */}
             <Route exact path="/" component={LandingPage}/>
-            <ProtectedRoute exactpath="/app" component={AppLayout} />
+            <ProtectedRoute exact path="/app" component={AppLayout} />
             <Route path="*" component={() => "404 NOT FOUND"} />
             </Switch>
         </div>
