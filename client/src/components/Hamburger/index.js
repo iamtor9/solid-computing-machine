@@ -11,8 +11,8 @@ class Hamburger extends React.Component {
     return (
       <Menu onClick={ this.showSettings } right>
         <a id="home" className="menu-item" href="/home">Home</a>
-        <a id="about" className="menu-item" href="/settings">Settings</a>
-        <a className="menu-item--small" href="/">Log Out</a>
+        <a id="settings" className="menu-item" href="/settings">Settings</a>
+        <a className="menu-item small logout" href="/">Log Out</a>
       </Menu>
     );
   }
