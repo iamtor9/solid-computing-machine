@@ -4,6 +4,7 @@ import {LandingPage} from "./landing page";
 import {AppLayout} from "./app.layout";
 import {ProtectedRoute} from "./protected.route";
 
+
 import {
     BrowserRouter, 
     Route, 
@@ -12,7 +13,7 @@ import {
 
 //import the page that we want the login page to return to 
 // home page? or main?
-import {} from " ";
+import {Home} from "../src/pages/Home";
 //import other needed pages here if we need to.
 
 //import our main style css here ex:
@@ -32,3 +33,4 @@ function App() {
 }
 const rootElement = document.getElementById("root");
 ReactDOM.render(<BrowserRouter><App /></BrowserRouter>, rootElement );
+export default Home 

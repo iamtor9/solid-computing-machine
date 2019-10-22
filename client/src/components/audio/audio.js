@@ -1,6 +1,13 @@
 // SOS button Audio onClick Sound Alert
 import React from "react";
+import ReactAudioPlayer from 'react-audio-player';
 import "./audio.css";
+
+<ReactAudioPlayer
+  src="my_audio_file.ogg"
+  autoPlay
+  controls
+/>
 
 function SoundButton (){
     return (
