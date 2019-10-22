@@ -1,0 +1,24 @@
+.addTime{
+    background-color: #4CAF50;
+    color: whitesmoke;
+    width: 110%;
+    height: 8vh;
+    position: relative;
+    left: 0;
+    top: 17vh;
+    border-radius: 8px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    -webkit-box-shadow: 0 14px 28px  rgba(0, 0, 0, 0.25),
+    0 10px 10px  rgba(0, 0, 0, 0.25);
+    box-shadow: 0 14px 28px  rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.25);
+    transition-duration: 300ms;
+}
+
+.addTime:active{
+    background-color: rgb(250, 244, 244);
+    color: rgb(10, 10, 10);
+    box-shadow: 0px 4px 8px rgba(darken(rgb(255, 255, 255), 30%))
+   
+}
