@@ -5,6 +5,7 @@ function InputForm(){
     const [firstName, setFirstName] = useState("")
     const [lastName, setLastName] = useState("")
     const [password, setPassword] = useState("")
+    const [email, setEmail] = useState("")
     const [passwordConfirm, setConfirm] = useState("")
     const [pin, setPin] = useState("")
     const [contactFirst, setContactFirst] = useState("")
@@ -19,6 +20,10 @@ function InputForm(){
         <label>
         <h2>Last Name:</h2>
             <input className="lastName" type="text" name="Last Name" value={lastName} onChange={(event) => setLastName(event.target.value)} />
+        </label>
+        <label>
+        <h2>Email:</h2>
+            <input className="email" type="text" name="Password" value={email} onChange={(event) => setEmail(event.target.value)} />
         </label>
         <label>
         <h2>Password:</h2>
@@ -47,7 +52,7 @@ function InputForm(){
         </label>
         <button className="button" onClick={event => {
             event.preventDefault();
-            if (!firstName || !lastName || !password || !passwordConfirm || !pin || !contactFirst || !contactLast || !phone) {
+            if (!firstName || !lastName || !email || !password || !passwordConfirm || !pin || !contactFirst || !contactLast || !phone) {
             } else if (password.length < 6) {
                 alert(
                     `Choose a more secure password ${firstName} ${lastName}`
