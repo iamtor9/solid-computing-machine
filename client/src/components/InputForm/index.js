@@ -54,7 +54,7 @@ function InputForm(){
         <button className="button" onClick={event => {
             event.preventDefault();
             if (!firstName || !lastName || !email || !password || !passwordConfirm || !pin || !contactFirst || !contactLast || !contactPhone) {
-            } else if (password.length < 6 && password === passwordConfirm) {
+            } else if (password.length < 7 && password === passwordConfirm) {
                 alert(
                     `Choose a more secure password`
                 );
