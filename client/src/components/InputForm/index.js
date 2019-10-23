@@ -11,7 +11,7 @@ function InputForm(){
     const [pin, setPin] = useState("")
     const [contactFirst, setContactFirst] = useState("")
     const [contactLast, setContactLast] = useState("")
-    const [phone, setPhone] = useState("")
+    const [contactPhone, setContactPhone] = useState("")
     return (
     <form className="mainForm">
         <label>
@@ -49,11 +49,11 @@ function InputForm(){
         <label>
             <h2>Contact Phone Number:</h2>
 
-            <input className="contactPhone" type="text" name="Phone Number" value={phone} onChange={(event) => setPhone(event.target.value)} />
+            <input className="contactPhone" type="text" name="Phone Number" value={contactPhone} onChange={(event) => setContactPhone(event.target.value)} />
         </label>
         <button className="button" onClick={event => {
             event.preventDefault();
-            if (!firstName || !lastName || !email || !password || !passwordConfirm || !pin || !contactFirst || !contactLast || !phone) {
+            if (!firstName || !lastName || !email || !password || !passwordConfirm || !pin || !contactFirst || !contactLast || !contactPhone) {
             } else if (password.length < 6 && password === passwordConfirm) {
                 alert(
                     `Choose a more secure password`
@@ -72,7 +72,24 @@ function InputForm(){
                         )
                 
             } else {
-                alert(`Welcome back, ${firstName} ${lastName}`)
+                fetch("/api/signup", {
+                    method: 'POST', // *GET, POST, PUT, DELETE, etc.
+                    headers: {
+                      'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                      firstName: firstName,
+                      lastName: lastName,
+                      password: password,
+                      email: email,
+                      pin: pin,
+                      contacts: [{
+                        contactFirst: contactFirst,
+                        contactLast: contactLast,
+                        contactPhone: contactPhone
+                      }]
+                    }) // body data type must match "Content-Type" header
+                  });
             }
 
             setFirstName("");
@@ -82,7 +99,7 @@ function InputForm(){
             setPin("");
             setContactFirst("");
             setContactLast("");
-            setPhone("");
+            setContactPhone("");
             setEmail("");
         }}>
         Submit
