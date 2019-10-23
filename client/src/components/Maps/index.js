@@ -1,48 +1,52 @@
 import React, {Component } from 'react';
 import GoogleMapReact from 'google-map-react';
+import Dot from "./Dot"
 import "./Maps.css";
  
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
-
 
 
 class Maps extends Component {
-
-    state = {
-    center: {
-      lat: 0,
-      lng: 0
-    },
-    zoom: 13
-  };
-
+   constructor(){
+      super();
+      this.state = {
+        ready: false,
+        where: {lat:null, lng:null},
+        error: null,
+        zoom: 15
+    };
+   }
   componentDidMount(){
-    navigator.geolocation.getCurrentPosition((position) =>{
-      let center = {
-        lat: position.coords.latitude,
-        lng: position.coords.longitude
+      let geoOptions ={
+        enableHighAccuracy: true,
+        timeOut: 20000,
+        maximunAge: 60 * 60,
+        distanceFilter: 1
       };
-      console.log("yfjytfjytfjytfjytfj",center)
-      this.setState({center})
-      return center;
-  })
+      this.setState({ready: false, error: null})
+      navigator.geolocation.getCurrentPosition(this.geoSuccess, this.geoFailure, geoOptions);
+  }
+  geoSuccess = (position) => {
+    this.setState({
+      ready: true,
+      where: {lat: position.coords.latitude, lng: position.coords.longitude}
+    })
+    console.log(position);
+  }
+  geoFailure = (err) =>{
+    this.setState({error: err.message});
   }
  
   render() {
     // console.log(this.state);
     return (
-      // Important! Always set the container height explicitly
+      
       <div className="theMap" style={{ height: '30vh', width: '100vw' }}>
         <GoogleMapReact
           bootstrapURLKeys={{ key: "AIzaSyAvh-RJE3-FnbTJlwKg-npCYZl_Yo8P6RU"}}
-          defaultCenter={this.state.center}
+          defaultCenter={this.state.where}
           defaultZoom={this.state.zoom}
         >
-          <AnyReactComponent
-            lat={59.955413}
-            lng={30.337844}
-            text="My Marker"
-          />
+          <Dot />
         </GoogleMapReact>
       </div>
     );

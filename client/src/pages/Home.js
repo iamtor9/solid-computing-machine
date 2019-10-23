@@ -13,7 +13,7 @@ import "./Home.css";
 
 
 function Home () {
-    return withAuth(
+    return (
         <>
         {/* <Route path="/secret" component={withAuth(Secret)} /> */}
         <Header />
