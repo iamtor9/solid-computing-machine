@@ -13,6 +13,7 @@ require("dotenv").config();
 //this is a test to prove my point that the token validation works
 router.post("/api/contacts", ensureToken, function(req, res) {
   // res.status(200).json(req.tokenData);
+  console.log(req.body);
   if (req.body.contacts.length === 0) {
     res.status(400).json({ message: "no contacts given" });
   } else {

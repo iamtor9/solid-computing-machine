@@ -5,9 +5,6 @@ import "../Settings/settings.css";
 
 export default function formSubmit () {
 
-    const [opass, setOpass] = useState("")
-    const [npass, setNpass] = useState("")
-    const [cpass, setCpass] = useState("")
     const [fname, setFname] = useState("")
     const [lname, setLname] = useState("")
     const [mobile, setMobile] = useState("")
@@ -15,46 +12,7 @@ export default function formSubmit () {
  return (
 
     <div className="settings1">
-      <div className="updatePassword">
-        <h1>
-          <label for="updatePassword">Change Password</label>
-        </h1>
-      </div>
-
-      <form className="passWordUpdate">
-      <label for="newPassword"></label>
-        
-        <input
-          type="text"
-          id="opass"
-          value= {opass}
-          name="oldPassword"
-          onChange={(event) => setOpass(event.target.value)}
-          placeholder="Old Password"
-        ></input>
-
-        <label for="newPassword"></label>
-        <input
-          type="text"
-          id="npass"
-          value= {npass}
-          name="newPassword"
-          onChange={(event) => setNpass(event.target.value)}
-
-          placeholder="New Password"
-        ></input>
-
-        <label for="confirmPassword"></label>
-        <input
-          type="text"
-          id="cpass"
-          value= {cpass}
-          name="confirmPassword"
-          onChange={(event) => setCpass (event.target.value)}
-          placeholder="Confirm New Password"
-        ></input>
-
-      </form>
+     
 
       <div className="newContact">
         <h1>
@@ -93,25 +51,32 @@ export default function formSubmit () {
           placeholder="Mobile Number"></input>
 
         <button type="submit" className="btn1" value="Submit" onClick={event => {
+
           // Preventing the default behavior of the form submit (which is to refresh the page)
           event.preventDefault();
-
-          alert("Hello");
-          setOpass("");
-          setNpass("");
-          setCpass("");
-          setFname("");
-          setLname("");
-          setMobile("");
-          console.log(opass)
-          console.log(npass)
-          console.log(cpass)
-          console.log(fname)
-          console.log(lname)
-          console.log (mobile)
-
-
-        }}>Submit</button>      
+          
+          fetch('/api/contacts', {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                "authorization": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjVkYjA4M2UyNWFkM2EwZDkxYmM5NWEzNSIsImVtYWlsIjoidGVzdGVyNEB3ZWJzaXRlLmNvbSIsInBpbiI6IjEyMzQiLCJjb250YWN0cyI6WyI1ZGIwODNlMjVhZDNhMGQ5MWJjOTVhMzYiXX0sImlhdCI6MTU3MTg0OTE4Nn0.sQDjAlzkYOEuK_vFHGW1o9gkw22Y4uICsg2PzESTU0k"
+              },
+              body: JSON.stringify({
+                "contacts": [{
+                  "firstName": fname,
+                  "lastName": lname,
+                  "phoneNumber": mobile
+              }]
+              })})
+              .then(response => response.json())
+          .then((response) => {
+              console.log(response);
+            }).catch((error) => {
+              console.log(error);
+            })
+        }}
+      >
+        </button>      
         </form>
     </div>
   );
