@@ -26,9 +26,20 @@ class Form extends Component {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     event.preventDefault();
     if (!this.state.email) {
-      alert("Please use valid email");
-    } else if (this.state.password.length < 6) {
-      alert(`Choose a more secure password`);
+      fetch("/api/login", {
+        method: 'POST', // *GET, POST, PUT, DELETE, etc.
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          email: this.state.email,
+          password: this.state.password,
+        }) // body data type must match "Content-Type" header
+      })
+      // .then(()=>this.props.login.push("/home"))
+      // .catch(err => console.log(err))
+    } else if (!this.state.password || !this.state.email) {
+      alert("Enter valid email or password");
     }
 
     this.setState({
@@ -62,7 +73,7 @@ class Form extends Component {
           />
         </form>
         <button className="btn" onClick={this.handleFormSubmit}>
-        Submit
+        Login
         </button>
         <div>
             <h1 className="register"> <hr></hr></h1>
