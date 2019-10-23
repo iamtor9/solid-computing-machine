@@ -10,61 +10,50 @@
   transition: all .2s ease-in-out;
   }
    
-  /* Color/shape of burger icon bars */
+
   .bm-burger-bars {
     background: #999fb6;
   }
-   
-  /* Color/shape of burger icon bars on hover*/
-   
-  /* Position and sizing of clickable cross button */
+
   .bm-cross-button {
     height: 24px;
     width: 24px;
   }
    
-  /* Color/shape of close button cross */
+  
   .bm-cross {
     background: #bdc3c7;
   }
    
-  /*
-  Sidebar wrapper styles
-  Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
-  */
   .bm-menu-wrap {
     position: fixed;
     height: 100%;
   }
    
-  /* General sidebar styles */
+
   .bm-menu {
     background: #b7bfe4;
     padding: 2.5em 1.5em 0;
     font-size: 1.15em;
     -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
     0 10px 10px rgba(0, 0, 0, 0.22);
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   opacity: .9;
   }
-   
-  /* Morph shape necessary with bubble or elastic */
+  
   .bm-morph-shape {
     fill: #373a47;
   }
-   
-  /* Wrapper for item list */
+
   .bm-item-list {
     color: #b8b7ad;
     padding: 0.8em;
   }
-   
-  /* Individual item */
+
   .bm-item {
     display: inline-block;
   }
    
-  /* Styling of overlay */
   .bm-overlay {
     background: rgba(0, 0, 0, 0.3);
   }
@@ -73,3 +62,17 @@
     text-decoration: none;
     color: #171a3b;
   }
+.menu-item{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bolder;
+  background-color: #373a47;
+  color: whitesmoke;
+  position: relative;
+  right: 65px;
+  width: 310px;
+  margin: 15px 15px;
+  height: 50px;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+  0 10px 10px rgba(0, 0, 0, 0.22);
+box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}

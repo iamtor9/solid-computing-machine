@@ -6,13 +6,10 @@
     text-align: center;
     color: #ffffff;
     z-index: 2;
-    height: 73%;
-    overflow: auto;
-    
 }
 .background{
     width: 90vw;
-    height: 72vh;
+    height: 125vh;
     position: relative;
     background: rgb(131, 128, 128);
     overflow: hidden;
@@ -23,16 +20,7 @@
     z-index: 1;
 }
 
-.email{
-  border-color:lightblue;
-  border-style: solid;
-    width: 80%;
-    height: 4vh;
-    border-radius: 3px;
-    -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
-      0 10px 10px rgba(0, 0, 0, 0.22);
-    box-shadow: 0 3px 6px #999, 0 3px 6px #999;
-   }
+
 .firstName{
     width: 65vw;
     height: 4vh;
@@ -50,15 +38,13 @@
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.25);
 }
 .password{
-  border-color:lightblue;
-  border-style: solid;
-    width: 80%;
+    width: 65vw;
     height: 4vh;
     border-radius: 3px;
     -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
       0 10px 10px rgba(0, 0, 0, 0.22);
-    box-shadow: 0 3px 6px #999, 0 3px 6px #999;
-   }
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.25);
+}
 .contactFirst{
     width: 65vw;
     height: 4vh;
@@ -76,42 +62,37 @@
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.25);
 }
 .contactPhone{
-  border-color:lightblue;
-  border-style: solid;
-    width: 80%;
-  height: 4vh;
-  border-radius: 3px;
-  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
-    0 10px 10px rgba(0, 0, 0, 0.22);
-    box-shadow: 0 3px 6px #999, 0 3px 6px #999;
-  }
-.pin{
-  border-color:lightblue;
-  border-style: solid;
-    width: 80%;
+    width: 65vw;
     height: 4vh;
     border-radius: 3px;
     -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
       0 10px 10px rgba(0, 0, 0, 0.22);
-    box-shadow: 0 3px 6px #999, 0 3px 6px #999;
-   }
-
-.button {
-  background-color: #4CAF50; /* Green */
-  border-style: solid;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  width: 265px;
-  height: 55px;
-  position: relative;
-  right: 0vw;
-  top: 3vh;
-  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
-  0 10px 10px rgba(0, 0, 0, 0.22);
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.25);
+}
+.pin{
+    width: 65vw;
+    height: 4vh;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+      0 10px 10px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.25);
 }
 
+.button {
+    background-color: #171a3b;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    width: 200px;
+    height: 55px;
+    position: relative;
+    right: 0vw;
+    top: 3vh;
+    -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.25);
+}
+body{
+    height: 1150px;
+}
