@@ -65,7 +65,7 @@ export default function formSubmit () {
                 "contacts": [{
                   "firstName": fname,
                   "lastName": lname,
-                  "telephone": mobile
+                  "phoneNumber": mobile
               }]
               })})
               .then(response => response.json())
