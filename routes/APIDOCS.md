@@ -1,6 +1,7 @@
 # How to use each endpoint and what it returns
 
-- `/api/signup` - the methods below explain the structure that is to be sent, and that will be sent back out
+# `/api/signup`
+ - the methods below explain the structure that is to be sent, and that will be sent back out
     - `post`
         - `input` - this will try to create a user based on the given body data <br>
         BODY
@@ -19,8 +20,8 @@
             }
             ```
         - `response` - JSON web token <br>
-    <hr>
-- `/api/login` - the methods below explain the structure that is to be sent and that will be sent back out
+# `/api/login` 
+- the methods below explain the structure that is to be sent and that will be sent back out
     - `post`
         - `input`<br>
         BODY
@@ -31,8 +32,8 @@
             }
             ```
         - `response` - JSON web token <br>
-    <hr>
-- `/api/contacts` - the methods below explain the structure that is to be sent and that will be sent back out
+# `/api/contacts` 
+- the methods below explain the structure that is to be sent and that will be sent back out
   - `post` - this will add contacts to the user-provided in the token
     - `input` <br>
       HEADERS
@@ -50,7 +51,6 @@
       }
       ```
     - `response` - NEW JSON web token <br>
-    <hr>
   - `delete` - this will delete contacts from the user provided in the token
     - `input` <br>
       HEADERS
@@ -64,7 +64,6 @@
       }
       ```
     - `response` - JSON web token <br>
-    <hr>
   - `get` - this will get contacts from the user provided in the token
     - `input` <br>
       HEADERS
@@ -88,8 +87,8 @@
         ]
         ```
     <br>
-    <hr>
-- `/api/password` - the methods below explain the structure that is to be sent and that will be sent back out
+# `/api/password`
+- the methods below explain the structure that is to be sent and that will be sent back out
     - `post`
         - `input`<br>
         HEADERS
@@ -105,8 +104,8 @@
             }
             ```
     - `response` - JSON web token <br>
-    <hr>
-- `/api/alert` - the methods below explain the structure that is to be sent and that will be sent back out
+# `/api/alert` 
+- the methods below explain the structure that is to be sent and that will be sent back out
     - `post`
         - `input`<br>
             HEADERS
@@ -121,4 +120,3 @@
             }
             ```
     - `response` - JSON web token <br>
-    <hr>
