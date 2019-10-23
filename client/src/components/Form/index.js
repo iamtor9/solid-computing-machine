@@ -35,7 +35,9 @@ class Form extends Component {
           email: this.state.email,
           password: this.state.password,
         }) // body data type must match "Content-Type" header
-      });
+      })
+      // .then(()=>this.props.login.push("/home"))
+      // .catch(err => console.log(err))
     } else if (!this.state.password || !this.state.email) {
       alert("Enter valid email or password");
     }
@@ -71,7 +73,7 @@ class Form extends Component {
           />
         </form>
         <button className="btn" onClick={this.handleFormSubmit}>
-        Submit
+        Login
         </button>
         <div>
             <h1 className="register"> <hr></hr></h1>

@@ -88,8 +88,11 @@ function InputForm(){
                         contactLast: contactLast,
                         contactPhone: contactPhone
                       }]
-                    }) // body data type must match "Content-Type" header
-                  });
+                    })
+                     // body data type must match "Content-Type" header
+                  })
+                    .then(()=>this.props.login.push("/home"))
+                    .catch(err => console.log(err))
             }
 
             setFirstName("");
