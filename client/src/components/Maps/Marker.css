@@ -22,15 +22,7 @@
     top: 50%;
     margin: -20px 0 0 -20px;
   }
-  .pin:after {
-    content: "";
-    width: 14px;
-    height: 14px;
-    margin: 8px 0 0 8px;
-    background: #e6e6e6;
-    position: absolute;
-    border-radius: 50%;
-  }
+
   
   .bounce {
     animation-name: bounce;
@@ -39,7 +31,7 @@
   }
   
   .pulse {
-    background: #d6d4d4;
+    background: #b60000;
     border-radius: 50%;
     height: 14px;
     width: 14px;
@@ -60,7 +52,7 @@
     animation: pulsate 1s ease-out;
     animation-iteration-count: infinite;
     opacity: 0;
-    box-shadow: 0 0 1px 3px #c40101;
+    box-shadow: 0 0 5px 10px #c40101;
     animation-delay: 1.1s;
   }
   
