@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {Component, useState } from "react";
 import { Route, Redirect, useHistory } from "react-router-dom";
 import auth from "../RouteProtections/auth";
 import "./InputForm.css";
@@ -158,7 +158,7 @@ function InputForm() {
               })
               .then(response => {
                 auth.login(response.token, () => {
-                  window.location = "/home"
+                  window.location.replace("/main")
                 });
               })
               .catch(err => console.log(err));
