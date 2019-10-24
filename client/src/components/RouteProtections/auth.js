@@ -4,7 +4,7 @@
 class Auth {
     constructor() {
         this.authenticated = false;
-        this.token - undefined;
+        this.token = undefined;
     }
 // here we may want to consider having the callback be local storage
     login(token, cb) {
@@ -14,7 +14,7 @@ class Auth {
     }
 
     logout(cb) {
-        this.token - undefined;
+        this.token = undefined;
         this.authenticated = false;
         cb()
     }

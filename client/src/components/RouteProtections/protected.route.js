@@ -1,7 +1,6 @@
 import React from "react";
 import { Route, Redirect } from "react-router-dom";
 import auth from "./auth";
-import Home from "../src/pages/Home";
 
 const ProtectedRoute = ({ component: Component, ...rest }) => {
   return (
@@ -14,9 +13,7 @@ const ProtectedRoute = ({ component: Component, ...rest }) => {
           return (
             <Redirect
               to={{
-                pathname: ("/".this.State = {
-                  from: props.location
-                })
+                pathname: ("/")
               }}
             />
           );

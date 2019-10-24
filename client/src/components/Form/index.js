@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { Route, Redirect } from "react-router-dom";
+import auth from "../RouteProtections/auth";
 import "./style.css";
 
 class Form extends Component {
@@ -25,7 +27,7 @@ class Form extends Component {
   handleFormSubmit = event => {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     event.preventDefault();
-    if (!this.state.email) {
+    if (this.state.email) {
       fetch("/api/login", {
         method: 'POST', // *GET, POST, PUT, DELETE, etc.
         headers: {
@@ -36,8 +38,20 @@ class Form extends Component {
           password: this.state.password,
         }) // body data type must match "Content-Type" header
       })
-      // .then(()=>this.props.login.push("/home"))
-      // .catch(err => console.log(err))
+      .then((response)=> {return response.json()})
+      .then((response)=>{
+        auth.login(response.token, ()=>{
+          
+          return (<Redirect
+            to={{
+              pathname: ("/home")
+            }} />)
+        })
+      })
+      .catch(err => {
+        console.log(err)
+        alert("ERROR")
+      })
     } else if (!this.state.password || !this.state.email) {
       alert("Enter valid email or password");
     }
