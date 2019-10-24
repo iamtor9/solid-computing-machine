@@ -4,13 +4,13 @@ import Footer from "../Footer";
 import InputForm from "../InputForm";
 
 
-function SignUpForm ({login}){
+function SignUpForm ({login, history}){
     return (
         <>
         <div className="signUpHeader">
         <h1 className="signUp">Sign Up</h1>
         </div>
-        <InputForm login={login}/>
+        <InputForm history={history} login={login}/>
         <Footer />
         <div className="background">
         </div>

@@ -18,6 +18,7 @@ const Maps = () => {
       });
       setLat(position.coords.latitude);
       setLng(position.coords.longitude);
+      localStorage.setItem("LTLN", JSON.stringify({LAT:position.coords.latitude, LON: position.coords.longitude}))
       console.log(position);
     })
 
