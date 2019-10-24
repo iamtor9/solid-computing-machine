@@ -16,11 +16,11 @@ function App() {
       <div>
         <Switch>
           <Route exact path="/" component={Login} />
-          <ProtectedRoute exact path="/home" component={Home} />
+          <Route exact path="/home" component={Home} />
           <Route exact path="/signup" component={SignUp} />
           <LogoutRoute exact path="/logout" />
-          <ProtectedRoute exact path="/main" component={Main} />
-          <ProtectedRoute exact path="/settings" component={Settings} />
+          <Route exact path="/main" component={Main} />
+          <Route exact path="/settings" component={Settings} />
           <Route component={NotFound} />
         </Switch>
       </div>
