@@ -12,7 +12,6 @@ function InputForm() {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [passwordConfirm, setConfirm] = useState("");
-  const [pin, setPin] = useState("");
   const [contactFirst, setContactFirst] = useState("");
   const [contactLast, setContactLast] = useState("");
   const [contactPhone, setContactPhone] = useState("");
@@ -119,18 +118,13 @@ function InputForm() {
             !email ||
             !password ||
             !passwordConfirm ||
-            !pin ||
             !contactFirst ||
             !contactLast ||
             !contactPhone
           ) {
           } else if (password.length < 7 && password === passwordConfirm) {
             alert(`Choose a more secure password`);
-          } else if (pin.length < 4) {
-            alert(`Choose a more secure pin`);
-          } else if (pin.length > 4) {
-            alert(`Choose a shorter pin`);
-          } else if (!is_valid_email(email)) {
+          }else if (!is_valid_email(email)) {
             alert(`Choose a valid email`);
           } else {
             fetch("/api/signup", {
@@ -143,7 +137,6 @@ function InputForm() {
                 lastName: lastName,
                 password: password,
                 email: email,
-                pin: pin,
                 contacts: [
                   {
                     firstName: contactFirst,
@@ -168,7 +161,6 @@ function InputForm() {
           setLastName("");
           setPassword("");
           setConfirm("");
-          setPin("");
           setContactFirst("");
           setContactLast("");
           setContactPhone("");
