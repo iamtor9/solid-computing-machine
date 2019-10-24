@@ -42,7 +42,6 @@ class Form extends Component {
           return response.json();
         })
         .then(response => {
-          alert(JSON.stringify(response))
           auth.login(response.token, () => {
             return this.props.history.push("/home");
           });
