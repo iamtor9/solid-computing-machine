@@ -5,5 +5,6 @@ module.exports = function(app){
     app.use(require("./password"));
     app.use(require("./alert"))
 
+    
     // app.use(require("./forOfor"));
 }
