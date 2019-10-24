@@ -1,52 +1,183 @@
-import React, {Component } from 'react';
+import React, { useState } from 'react';
 import GoogleMapReact from 'google-map-react';
+import Marker from "./Marker";
 import "./Maps.css";
+
+const Maps = () => {
+
  
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
+    let [center, setCenter] = useState({lat: 44.9778, lng: -93.2650 });
+    let [zoom, setZoom] = useState(16);
+    let [lat, setLat] = useState(44.9778);
+    let [lng, setLng] = useState(-93.2650);
 
-
-
-class Maps extends Component {
-
-    state = {
-    center: {
-      lat: 0,
-      lng: 0
-    },
-    zoom: 13
-  };
-
-  componentDidMount(){
-    navigator.geolocation.getCurrentPosition((position) =>{
-      let center = {
+    navigator.geolocation.watchPosition((position) =>{
+      setCenter({
         lat: position.coords.latitude,
         lng: position.coords.longitude
-      };
-      console.log("yfjytfjytfjytfjytfj",center)
-      this.setState({center})
-      return center;
-  })
-  }
- 
-  render() {
-    // console.log(this.state);
+      });
+      setLat(position.coords.latitude);
+      setLng(position.coords.longitude);
+      console.log(position);
+    })
+
     return (
-      // Important! Always set the container height explicitly
-      <div className="theMap" style={{ height: '30vh', width: '100vw' }}>
+        <div className="theMap" style={{ height: '30vh', width: '100vw' }}>
         <GoogleMapReact
-          bootstrapURLKeys={{ key: "AIzaSyAvh-RJE3-FnbTJlwKg-npCYZl_Yo8P6RU"}}
-          defaultCenter={this.state.center}
-          defaultZoom={this.state.zoom}
+          bootstrapURLKeys={{ key: 'AIzaSyAvh-RJE3-FnbTJlwKg-npCYZl_Yo8P6RU' }}
+          defaultCenter={center}
+          defaultZoom={zoom}
+          options={{
+            styles: mapStyle,
+        }}
         >
-          <AnyReactComponent
-            lat={59.955413}
-            lng={30.337844}
-            text="My Marker"
+          <Marker
+            lat={lat}
+            lng={lng}
+            name="My Marker"
+            color="red"
           />
         </GoogleMapReact>
       </div>
     );
-  }
 }
- 
+
+let mapStyle = [
+  {
+      "featureType": "all",
+      "elementType": "labels.text.fill",
+      "stylers": [
+          {
+              "color": "#ffffff"
+          }
+      ]
+  },
+  {
+      "featureType": "all",
+      "elementType": "labels.text.stroke",
+      "stylers": [
+          {
+              "color": "#000000"
+          },
+          {
+              "lightness": 13
+          }
+      ]
+  },
+  {
+      "featureType": "administrative",
+      "elementType": "geometry.fill",
+      "stylers": [
+          {
+              "color": "#000000"
+          }
+      ]
+  },
+  {
+      "featureType": "administrative",
+      "elementType": "geometry.stroke",
+      "stylers": [
+          {
+              "color": "#144b53"
+          },
+          {
+              "lightness": 14
+          },
+          {
+              "weight": 1.4
+          }
+      ]
+  },
+  {
+      "featureType": "landscape",
+      "elementType": "all",
+      "stylers": [
+          {
+              "color": "#08304b"
+          }
+      ]
+  },
+  {
+      "featureType": "poi",
+      "elementType": "geometry",
+      "stylers": [
+          {
+              "color": "#0c4152"
+          },
+          {
+              "lightness": 5
+          }
+      ]
+  },
+  {
+      "featureType": "road.highway",
+      "elementType": "geometry.fill",
+      "stylers": [
+          {
+              "color": "#000000"
+          }
+      ]
+  },
+  {
+      "featureType": "road.highway",
+      "elementType": "geometry.stroke",
+      "stylers": [
+          {
+              "color": "#0b434f"
+          },
+          {
+              "lightness": 25
+          }
+      ]
+  },
+  {
+      "featureType": "road.arterial",
+      "elementType": "geometry.fill",
+      "stylers": [
+          {
+              "color": "#000000"
+          }
+      ]
+  },
+  {
+      "featureType": "road.arterial",
+      "elementType": "geometry.stroke",
+      "stylers": [
+          {
+              "color": "#0b3d51"
+          },
+          {
+              "lightness": 16
+          }
+      ]
+  },
+  {
+      "featureType": "road.local",
+      "elementType": "geometry",
+      "stylers": [
+          {
+              "color": "#000000"
+          }
+      ]
+  },
+  {
+      "featureType": "transit",
+      "elementType": "all",
+      "stylers": [
+          {
+              "color": "#146474"
+          }
+      ]
+  },
+  {
+      "featureType": "water",
+      "elementType": "all",
+      "stylers": [
+          {
+              "color": "#021019"
+          }
+      ]
+  }
+]
+
 export default Maps;
