@@ -2,7 +2,6 @@ import React from "react";
 import withAuth from './withAuth';
 import Header from "../components/Header";
 import StartButton from "../components/StartButton";
-import TimeSelect from "../components/TimeSelect";
 import Footer from "../components/Footer";
 import "./Home.css";
 
@@ -17,7 +16,6 @@ function Home () {
         <>
         {/* <Route path="/secret" component={withAuth(Secret)} /> */}
         <Header />
-        <TimeSelect />
         <StartButton />
         <Footer />
         </>
