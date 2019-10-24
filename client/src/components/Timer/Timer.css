@@ -1,0 +1,15 @@
+.ourTimer{
+    width: 70vw;
+    height: 15vh;
+    position: relative;
+    top: 35vh;
+    left: 10%;
+    background-color: whitesmoke;
+    opacity: .8;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    color: black;
+    z-index: 5;
+    margin-bottom: 0;
+}
