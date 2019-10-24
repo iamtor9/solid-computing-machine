@@ -4,16 +4,23 @@
 class Auth {
     constructor() {
         this.authenticated = false;
+        this.token - undefined;
     }
 // here we may want to consider having the callback be local storage
-    login(cb) {
+    login(token, cb) {
+        this.token = token;
         this.authenticated = true;
         cb()
     }
 
     logout(cb) {
+        this.token - undefined;
         this.authenticated = false;
         cb()
+    }
+
+    getToken(){
+        return this.token;
     }
 
     isAuthenticated() {
