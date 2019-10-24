@@ -151,7 +151,7 @@ function InputForm() {
               })
               .then(response => {
                 auth.login(response.token, () => {
-                  window.location.replace("/main")
+                  return (<Redirect to="/main" />)
                 });
               })
               .catch(err => console.log(err));
