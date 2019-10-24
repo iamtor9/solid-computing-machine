@@ -158,19 +158,7 @@ function InputForm() {
               })
               .then(response => {
                 auth.login(response.token, () => {
-                  return (
-                    <Route
-                      render={props => {
-                          return (
-                            <Redirect
-                              to={{
-                                pathname: ("/main")
-                              }}
-                            />
-                          );
-                        }}
-                    ></Route>
-                  );
+                  window.location.replace("/main")
                 });
               })
               .catch(err => console.log(err));
