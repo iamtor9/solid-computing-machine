@@ -1,24 +1,26 @@
-//this tracks login status after user logs in
-//while keeping it protected
+// import Home from "../src/pages/Home";
 
-class Auth {
-    constructor() {
-        this.authenticated = false;
-    }
-// here we may want to consider having the callback be local storage
-    login(cb) {
-        this.authenticated = true;
-        cb()
-    }
+// //this tracks login status after user logs in
+// //while keeping it protected
 
-    logout(cb) {
-        this.authenticated = false;
-        cb()
-    }
+// class Auth {
+//     constructor() {
+//         this.authenticated = false;
+//     }
+// // here we may want to consider having the callback be local storage
+//     login(cb) {
+//         this.authenticated = true;
+//         cb()
+//     }
 
-    isAuthenticated() {
-        return this.authenticated; 
-    }
-}
+//     logout(cb) {
+//         this.authenticated = false;
+//         cb()
+//     }
 
-export default new Auth();
+//     isAuthenticated() {
+//         return this.authenticated; 
+//     }
+// }
+
+// export default new Auth();
