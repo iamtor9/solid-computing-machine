@@ -158,7 +158,7 @@ function InputForm() {
               })
               .then(response => {
                 auth.login(response.token, () => {
-                  return this.props.history.push("/home");
+                  window.location = "/home"
                 });
               })
               .catch(err => console.log(err));

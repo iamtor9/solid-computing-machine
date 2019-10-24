@@ -12,7 +12,7 @@ class Hamburger extends React.Component {
       <Menu onClick={ this.showSettings } right>
         <a id="home" className="menu-item" href="/home">Home</a>
         <a id="settings" className="menu-item" href="/settings">Settings</a>
-        <a className="menu-item small logout" href="/">Log Out</a>
+        <a className="menu-item small logout" href="/logout">Log Out</a>
       </Menu>
     );
   }

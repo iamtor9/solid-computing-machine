@@ -82,7 +82,7 @@ export default function formSubmit() {
                 console.log(error);
               });
           }}
-        ></button>
+        >Add Contact</button>
       </form>
     </div>
   );
