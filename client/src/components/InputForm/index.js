@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Route, Redirect } from "react-router-dom";
+import { Route, Redirect, useHistory } from "react-router-dom";
 import auth from "../RouteProtections/auth";
 import "./InputForm.css";
 var is_valid_email = function(email) {
@@ -146,20 +146,20 @@ function InputForm() {
                 pin: pin,
                 contacts: [
                   {
-                    contactFirst: contactFirst,
-                    contactLast: contactLast,
-                    contactPhone: contactPhone
+                    firstName: contactFirst,
+                    lastName: contactLast,
+                    phoneNumber: contactPhone
                   }
                 ]
               })
             })
-              .then(response =>{return response.json()})
               .then(response => {
+                return response.json();
+              })
+              .then(response => {
+                console.log(response);
                 auth.login(response.token, () => {
-                  return (<Redirect
-                    to={{
-                      pathname: ("/home")
-                    }} />)
+                  return this.props.history.push("/home");
                 });
               })
               .catch(err => console.log(err));
