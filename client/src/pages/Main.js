@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import SOS from "../components/SOS";
@@ -10,13 +10,18 @@ import Maps from "../components/Maps";
 
 
 function Main (){
+
     return(
         <>
         <Header />
-        <Timer />
+        <Timer 
+        
+        />
         <Maps />
         <SOS />
-        <Stop />
+        <Stop 
+        onClick={()=>{}}
+        />
         <Footer />
         </>
     )
