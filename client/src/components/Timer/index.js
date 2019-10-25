@@ -41,6 +41,7 @@ class Timer extends Component {
       }));
       if(localStorage.getItem("ISALERT") === "true"){
         this.resetTime(true);
+        localStorage.setItem("ISALERT", "false");
       }
       if (this.state.secondsElapsed % 2 === 0) {
         this.setState({
