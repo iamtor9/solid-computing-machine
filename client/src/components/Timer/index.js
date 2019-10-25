@@ -1,5 +1,4 @@
 import React, { Component, useState } from "react";
-import Countdown from "react-countdown-now";
 import auth from "../RouteProtections/auth";
 import "./Timer.css";
 
@@ -40,6 +39,9 @@ class Timer extends Component {
       this.setState(({ secondsElapsed }) => ({
         secondsElapsed: secondsElapsed - 1
       }));
+      if(localStorage.getItem("ISALERT") === "true"){
+        this.resetTime(true);
+      }
       if (this.state.secondsElapsed % 2 === 0) {
         this.setState({
           clickCount: 0

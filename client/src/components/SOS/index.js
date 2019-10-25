@@ -18,7 +18,8 @@ function SOS (){
                 .then(response => {
                   console.log(response);
                   auth.login(response.token, ()=>{
-                    alert("SAFE STATE ALERT!")
+                    localStorage.setItem("ISALERT", "true");
+                    alert("SAFE STATE ALERT!");
                   })
                 })
                 .catch(error => {
