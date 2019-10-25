@@ -11,7 +11,33 @@
     font-size: 45px;
     text-align: center;
     color: black;
-    z-index: 5;
+    z-index: 2;
     margin-bottom: 0;
     border-radius: 8px;
+}
+.stop{
+    background-color:  #282b4b;
+    color:whitesmoke;
+    font-family: monospace;
+    font-size: 34px;
+    text-align: center;
+    width: 200px;
+    height: 125px;
+    border: whitesmoke solid;
+    border-radius: 8px;
+    -webkit-box-shadow: 0 14px 28px  rgba(0, 0, 0, 0.25),
+    0 10px 10px  rgba(0, 0, 0, 0.25);
+    box-shadow: 0 14px 28px  rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.25);
+    position: relative;
+    top: 40vh;
+    transition-duration: 300ms;
+    left: 26vw;
+    opacity: 1;
+}
+
+.stop:active{
+    background-color: rgb(250, 244, 244);
+    color: rgb(10, 10, 10);
+    box-shadow: 0px 4px 8px rgba(darken(rgb(255, 255, 255), 30%))
+   
 }

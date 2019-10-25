@@ -5,15 +5,18 @@ import "./Timer.css";
  
 
 
-function Timer(){
+function Timer(props){
+
+    const [time, setTime] = useState(60000 * 2);
+    const [auto, setAuto] = useState(false);
 
     return(
         <div className="ourTimer">
         <>
          <Countdown 
-         date={Date.now() + 60000 * 2} 
-         autoStart={false}
-         //coop, this is where you can tie in nexmo. its set for an alert right now
+         date={Date.now() + time} 
+         autoStart={auto}
+         onPause={() => setTime(time + setTime + 50000)}
          onComplete={() =>
             fetch("/api/alert", {
                 method: "POST",
@@ -35,6 +38,7 @@ function Timer(){
                 })
         }
          />
+         <button className="stop" onClick={() => setAuto(true)}>Start/Stop</button>
         </>
         </div>
     )
