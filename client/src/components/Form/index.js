@@ -43,7 +43,7 @@ class Form extends Component {
         })
         .then(response => {
           auth.login(response.token, () => {
-            return this.props.history.push("/home");
+            return this.props.history.push("/main");
           });
         })
         .catch(err => {
