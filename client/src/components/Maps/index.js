@@ -8,8 +8,8 @@ const Maps = () => {
  
     let [center, setCenter] = useState({lat: 44.9778, lng: -93.2650 });
     let [zoom, setZoom] = useState(16);
-    let [lat, setLat] = useState(44.9778);
-    let [lng, setLng] = useState(-93.2650);
+    let [lat, setLat] = useState(44.9838394);
+    let [lng, setLng] = useState(-93.1806352);
 
     navigator.geolocation.watchPosition((position) =>{
     setLat(position.coords.latitude);
