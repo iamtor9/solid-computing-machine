@@ -5,10 +5,10 @@ import "./SignUp.css";
 
 
 
-function SignUp (){
+function SignUp ({history}){
     return(
         <>
-           <SignUpForm />
+           <SignUpForm history={history}/>
         </>
     )
 }

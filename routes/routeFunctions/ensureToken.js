@@ -15,26 +15,23 @@ module.exports = function(req, res, next) {
       } else {
         //compare the token data to what we have for the user in the database to make sure it is valid and not old
         let userData = data.user;
-        db.Users.findOne({ _id: data.user._id })
-          .then(user => {
-            if (
-              userData.email === user.email &&
-              userData.pin === user.pin &&
-              JSON.stringify(userData.contacts) ===
-                JSON.stringify(user.contacts)
-            ) {
-              //if completely valid token then sent to the route
-              req.tokenData = data.user;
-              db.Users.findOne({ _id: data.user._id })
-                .populate("contacts")
-                .then(user => {
-                  req.UserData = user;
-                  next();
-                });
-            } else {
-              res.sendStatus(403);
-            }
-          });
+        db.Users.findOne({ _id: data.user._id }).then(user => {
+          if (
+            userData.email === user.email &&
+            JSON.stringify(userData.contacts) === JSON.stringify(user.contacts)
+          ) {
+            //if completely valid token then sent to the route
+            req.tokenData = data.user;
+            db.Users.findOne({ _id: data.user._id })
+              .populate("contacts")
+              .then(user => {
+                req.UserData = user;
+                next();
+              });
+          } else {
+            res.sendStatus(403);
+          }
+        });
       }
     });
   } else {

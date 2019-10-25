@@ -28,19 +28,6 @@ let UsersScheme = new Schema({
     trim: true,
     required: "Password is Required"
   },
-  pin: {
-    type: String,
-    trim: true,
-    required: "Pin is Required",
-    validate: [
-      function(input) {
-        let isCorrect = input.length >= 4;
-        if (isCorrect) isCorrect = input.length <= 4;
-        return isCorrect;
-      },
-      "Pin should be 4 characters"
-    ]
-  },
   contacts: [{
     // Store ObjectIds in the array
     type: Schema.Types.ObjectId,
