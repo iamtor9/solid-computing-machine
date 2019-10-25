@@ -34,6 +34,7 @@ class Timer extends Component {
       clickCount: 0
     });
     this.setState({ isActive: true });
+    localStorage.setItem("ISALERT", "false");
     this.countdown = setInterval(() => {
       console.log("interval");
       this.setState(({ secondsElapsed }) => ({
