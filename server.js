@@ -16,6 +16,7 @@ if (process.env.NODE_ENV === "production") {
 routes(app);
 
 app.use(express.static(path.join(__dirname, "/client/build")));
+app.use(express.static(path.join(__dirname, "/client/public")));
 /*React root*/
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname + "/client/build/index.html"));

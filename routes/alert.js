@@ -14,7 +14,6 @@ router.post("/api/alert", ensureToken, async function(req, res) {
   let {LAT, LON} = req.body
   let contacts = req.UserData.contacts;
   await contacts.forEach((contact, i) => {
-    console.log(contact);
     nexmo.message.sendSms(
       process.env.VIRTUAL_PHONE,
       parseInt(contact.phoneNumber),
