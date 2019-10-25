@@ -12,12 +12,12 @@ const Maps = () => {
     let [lng, setLng] = useState(-93.2650);
 
     navigator.geolocation.watchPosition((position) =>{
+    setLat(position.coords.latitude);
+    setLng(position.coords.longitude);
       setCenter({
         lat: position.coords.latitude,
         lng: position.coords.longitude
       });
-      setLat(position.coords.latitude);
-      setLng(position.coords.longitude);
       console.log(position);
     })
 

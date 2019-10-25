@@ -22,8 +22,6 @@
     top: 50%;
     margin: -20px 0 0 -20px;
   }
-
-  
   .bounce {
     animation-name: bounce;
     animation-fill-mode: both;
@@ -43,7 +41,7 @@
     z-index: -2;
   }
   .pulse:after {
-    content: "";
+    content: "User";
     border-radius: 50%;
     height: 40px;
     width: 40px;
